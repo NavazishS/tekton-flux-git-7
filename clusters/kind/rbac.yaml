@@ -11,43 +11,43 @@ rules:
 - apiGroups:
   - triggers.tekton.dev
   resources:
-  - eventlisteners
-  - triggerbindings
-  - triggertemplates
-  - triggers
-  - clusterinterceptors
-  - pods
+  - "*"
   verbs:
   - get
   - list
+  - create
+  - update
+  - delete
+  - patch
   - watch
 - apiGroups:
   - ""
   resources:
-  - configmaps
-  - clusterinterceptors
-  - pods
+  - "*"
   verbs:
   - get
   - list
+  - create
+  - update
+  - delete
+  - patch
   - watch
 - apiGroups:
   - tekton.dev
   resources:
-  - pipelineruns
-  - pipelineresources
-  - taskruns
-  - clusterinterceptors
-  - pods
+  - "*"
   verbs:
-  - create
   - get
   - list
+  - create
+  - update
+  - delete
+  - patch
   - watch
 - apiGroups:
   - ""
   resources:
-  - serviceaccounts
+  - "*"
   verbs:
   - impersonate
 ---
@@ -59,29 +59,26 @@ rules:
 - apiGroups:
   - triggers.tekton.dev
   resources:
-  - clustertriggerbindings
-  - eventlisteners
-  - triggerbindings
-  - triggertemplates
-  - triggers
-  - clusterinterceptors
-  - pods
+  - "*"
   verbs:
   - get
   - list
+  - create
+  - update
+  - delete
+  - patch
   - watch
 - apiGroups:
   - tekton.dev
   resources:
-  - pipelineruns
-  - pipelineresources
-  - taskruns
-  - clusterinterceptors
-  - pods
+  - "*"
   verbs:
-  - create
   - get
   - list
+  - create
+  - update
+  - delete
+  - patch
   - watch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
