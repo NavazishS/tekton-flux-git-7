@@ -24,6 +24,6 @@ spec:
             value: $(tt.params.repository)
           - name: namespace
             value: $(tt.params.namespace)
-        serviceAccountName: flux-notifications-sa
+        #serviceAccountName: flux-notifications-sa
         pipelineRef:
           name: opa-gatekeeper-pipeline
