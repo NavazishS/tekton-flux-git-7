@@ -15,7 +15,7 @@ spec:
       kind: PipelineRun
       metadata:
         annotations:
-        name: opa-gatekeeper-notification-run
+        name: opa-gatekeeper-notification-run-$(uid)
       spec:
         params:
           - name: message
