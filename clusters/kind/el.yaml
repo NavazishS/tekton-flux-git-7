@@ -3,7 +3,8 @@ kind: EventListener
 metadata:
   name: opa-gatekeeper-listener
 spec:
-  serviceAccountName: flux-notifications-sa
+  #serviceAccountName: flux-notifications-sa
+  serviceAccountName: tekton-tester
   triggers:
     - name: opa-gatekeeper-notification-trigger
       interceptors:
